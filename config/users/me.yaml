@@ -1,0 +1,24 @@
+# PhD scholarships and positions worldwide. Type a department on the site to narrow it.
+id: me
+display_name: PhD
+degree_levels:
+  - phd
+opportunity_types:
+  - position
+  - scholarship
+# Empty means worldwide. Use names or aliases such as Germany, UK, USA.
+countries: []
+# Leave this empty. The site search is where you type a department.
+disciplines: []
+keywords_include: []
+# Matched against the title only, so a supervisor's job title does not hide a PhD opening.
+keywords_exclude: []
+funding_preference:
+  - fully_funded
+  - partial
+  - unknown
+allow_unknown_funding: true
+require_discipline_match: false
+min_score: 60
+email_env: ME_EMAIL
+telegram_chat_id_env: ME_TELEGRAM_CHAT_ID

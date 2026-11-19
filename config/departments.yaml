@@ -1,0 +1,73 @@
+# A friend does not need an account. On the site, open Browse and pick a department.
+# To give someone a saved tab, copy config/users/me.yaml and change department.
+departments:
+  - id: engineering
+    label: Engineering
+    keywords:
+      - engineering
+      - engineer
+      - mechanical
+      - electrical
+      - electronics
+      - civil engineering
+      - chemical engineering
+      - robotics
+      - aerospace
+      - mechatronics
+      - manufacturing
+      - materials
+      - materials science
+      - renewable energy
+      - energy
+      - industrial
+      - automation
+
+  - id: laboratory
+    label: Laboratory
+    keywords:
+      - laboratory
+      - lab
+      - biology
+      - chemistry
+      - biochemistry
+      - biomedical
+      - microbiology
+      - molecular biology
+      - biotechnology
+      - genetics
+      - pharmacy
+      - clinical laboratory
+      - life science
+
+  - id: computer-science
+    label: Computer science
+    keywords:
+      - computer science
+      - software
+      - artificial intelligence
+      - machine learning
+      - data science
+      - informatics
+
+  - id: medicine
+    label: Medicine
+    keywords:
+      - medicine
+      - medical
+      - clinical
+      - nursing
+      - public health
+      - oncology
+
+  - id: business
+    label: Business
+    keywords:
+      - business
+      - finance
+      - management
+      - economics
+      - mba
+
+  - id: any
+    label: Any department
+    keywords: []

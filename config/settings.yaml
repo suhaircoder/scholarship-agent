@@ -1,0 +1,41 @@
+# Paths are relative to the project root (the directory that contains config/).
+database_path: data/opportunities.db
+digests_dir: data/digests
+log_dir: data/logs
+
+http:
+  timeout_seconds: 30
+  max_retries: 3
+  # Pause between sources. Public feeds only; do not turn this into a crawler.
+  delay_seconds: 1.5
+  user_agent: "ScholarshipAgent/0.1 (personal academic digest; public RSS only)"
+  max_items_per_source: 80
+
+llm:
+  # Deterministic rules run either way. Turn this on to re-read low-confidence posts.
+  enabled: false
+  base_url: https://api.openai.com/v1
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  timeout_seconds: 45
+  max_items_per_run: 20
+  # Only posts below this confidence are sent to the model.
+  confidence_below: 0.8
+
+delivery:
+  write_digest_files: true
+  email:
+    enabled: false
+    host_env: SMTP_HOST
+    port_env: SMTP_PORT
+    username_env: SMTP_USERNAME
+    password_env: SMTP_PASSWORD
+    from_env: SMTP_FROM
+    use_tls: true
+  telegram:
+    enabled: false
+    bot_token_env: TELEGRAM_BOT_TOKEN
+
+# EURAXESS only publishes a short recent window, so the watcher should run often.
+schedule:
+  interval_hours: 2

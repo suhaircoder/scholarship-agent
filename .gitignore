@@ -1,0 +1,12 @@
+.venv/
+.tmp-wheels/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+.env
+data/
+_probe_feeds.py

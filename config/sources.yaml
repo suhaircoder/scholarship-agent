@@ -1,0 +1,182 @@
+# Each source must be a feed the publisher already offers for readers.
+# If a feed starts returning 403 or 404, disable it. Do not route around the block.
+sources:
+  - id: euraxess
+    type: rss
+    enabled: true
+    url: https://euraxess.ec.europa.eu/job-feed
+    description: Newest European Commission research jobs.
+
+  - id: euraxess_pages
+    type: euraxess_search
+    enabled: true
+    url: https://euraxess.ec.europa.eu/jobs/search
+    pages: 30
+    description: The public EURAXESS search, thirty pages of open research positions.
+
+  - id: scholarship_region_phd
+    type: rss
+    enabled: true
+    url: https://www.scholarshipregion.com/category/phd-scholarships/feed/
+    description: PhD scholarship posts from Scholarship Region.
+
+  - id: scholarship_region_masters
+    type: rss
+    enabled: true
+    url: https://www.scholarshipregion.com/category/masters-scholarships/feed/
+    description: Master's scholarship posts from Scholarship Region.
+
+  - id: scholars4dev_phd
+    type: rss
+    enabled: true
+    url: https://www.scholars4dev.com/category/phd-scholarships/feed/
+    description: PhD scholarships from Scholars4Dev.
+
+  - id: scholars4dev_engineering
+    type: rss
+    enabled: true
+    url: https://www.scholars4dev.com/category/engineering-scholarships/feed/
+    description: Engineering scholarships from Scholars4Dev.
+
+  - id: scholarship_region
+    type: rss
+    enabled: true
+    url: https://www.scholarshipregion.com/feed/
+    description: Scholarship write-ups. The matcher keeps degree-specific scholarships.
+
+  - id: scholars4dev
+    type: rss
+    enabled: true
+    url: https://www.scholars4dev.com/feed/
+    description: Development-focused scholarships, often master's funding.
+
+  - id: scholarship_region_saudi
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=Saudi%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 2
+    description: Public Scholarship Region posts that mention a Saudi scholarship.
+
+  - id: scholarship_region_china
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=China%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 2
+    description: Public Scholarship Region posts that mention a China scholarship.
+
+  - id: scholarship_region_turkey
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=Turkey%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 2
+    description: Public Scholarship Region posts that mention a Turkey scholarship.
+
+  - id: scholarship_region_italy
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=Italy%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 2
+    description: Public Scholarship Region posts that mention an Italy scholarship.
+
+  - id: scholars4dev_china
+    type: wp_posts
+    enabled: true
+    url: https://www.scholars4dev.com/wp-json/wp/v2/posts?categories=59&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 1
+    description: Scholars4Dev posts filed under China.
+
+  - id: scholars4dev_italy
+    type: wp_posts
+    enabled: true
+    url: https://www.scholars4dev.com/wp-json/wp/v2/posts?categories=80&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 2
+    description: Scholars4Dev posts filed under Italy.
+
+  - id: scholarship_region_europe
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=Europe%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 2
+    description: Scholarship Region posts about scholarships in Europe.
+
+  - id: scholarship_region_asia
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=Asia%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 2
+    description: Scholarship Region posts about scholarships in Asia.
+
+  - id: scholarship_region_usa
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=USA%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 1
+    description: Scholarship Region posts about scholarships in the United States.
+
+  - id: scholarship_region_uk
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=UK%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 1
+    description: Scholarship Region posts about scholarships in the United Kingdom.
+
+  - id: scholarship_region_canada
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=Canada%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 1
+    description: Scholarship Region posts about scholarships in Canada.
+
+  - id: scholarship_region_australia
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=Australia%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 1
+    description: Scholarship Region posts about scholarships in Australia.
+
+  - id: scholarship_region_germany
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=Germany%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 1
+    description: Scholarship Region posts about scholarships in Germany.
+
+  - id: scholarship_region_japan
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=Japan%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 1
+    description: Scholarship Region posts about scholarships in Japan.
+
+  - id: scholarship_region_india
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=India%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 1
+    description: Scholarship Region posts about scholarships in India.
+
+  - id: scholarship_region_france
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=France%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 1
+    description: Scholarship Region posts about scholarships in France.
+
+  - id: scholarship_region_africa
+    type: wp_posts
+    enabled: true
+    url: https://www.scholarshipregion.com/wp-json/wp/v2/posts?search=Africa%20scholarship&per_page=10&_fields=link,title,excerpt,content,date
+    pages: 1
+    description: Scholarship Region posts about scholarships in Africa.
+
+  - id: opportunity_desk
+    type: rss
+    enabled: false
+    url: https://opportunitydesk.org/feed/
+    description: Broader fellowships and news. Off by default because many items are not degree programs.
+
+  - id: opportunities_for_africans
+    type: rss
+    enabled: false
+    url: https://opportunitiesforafricans.com/feed/
+    description: Mixed opportunities. Off by default for the same reason.

@@ -1,0 +1,40 @@
+[project]
+name = "scholarship-agent"
+version = "0.1.0"
+description = "Collect, match, and deliver academic opportunities for more than one person."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27",
+    "feedparser>=6.0",
+    "pydantic>=2.7",
+    "pyyaml>=6.0",
+    "python-dateutil>=2.9",
+    "python-dotenv>=1.0",
+    "socksio>=1.0",
+    "pypdf>=5.0",
+    "pillow>=10",
+    "winrt-runtime>=3.2; sys_platform == 'win32'",
+    "winrt-Windows.Foundation>=3.2; sys_platform == 'win32'",
+    "winrt-Windows.Globalization>=3.2; sys_platform == 'win32'",
+    "winrt-Windows.Graphics.Imaging>=3.2; sys_platform == 'win32'",
+    "winrt-Windows.Media.Ocr>=3.2; sys_platform == 'win32'",
+    "winrt-Windows.Storage.Streams>=3.2; sys_platform == 'win32'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+scholarship-agent = "scholarship_agent.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

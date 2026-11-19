@@ -1,0 +1,22 @@
+# Master's scholarships and positions worldwide. Type a department on the site to narrow it.
+id: sister
+display_name: Master
+degree_levels:
+  - masters
+opportunity_types:
+  - scholarship
+  - position
+countries: []
+# Leave this empty. The site search is where you type a department.
+disciplines: []
+keywords_include: []
+keywords_exclude: []
+funding_preference:
+  - fully_funded
+  - partial
+  - unknown
+allow_unknown_funding: true
+require_discipline_match: false
+min_score: 60
+email_env: SISTER_EMAIL
+telegram_chat_id_env: SISTER_TELEGRAM_CHAT_ID
